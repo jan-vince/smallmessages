@@ -3,3 +3,6 @@
     - migration_v100.php
 1.1.0:
     - Added czech language
+1.2.0:
+    - Added option to show messages on specific pages only and to force on cookie's controlled
+    - migration_v120.php

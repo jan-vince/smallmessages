@@ -31,7 +31,10 @@ class Message extends Model {
 
     protected $guarded = [];
 
-    protected $jsonable = [];
+    protected $jsonable = [
+        'cookie_pages_list',
+        'show_on_pages_list',
+    ];
 
     /**
      * @var array Relations

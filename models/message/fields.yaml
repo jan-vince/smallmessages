@@ -5,6 +5,12 @@ fields:
         readOnly: true
         disabled: true
 
+    active:
+        label: 'janvince.smallmessages::lang.common.columns.active'
+        span: left
+        type: switch
+        default: true
+
     title:
         label: 'janvince.smallmessages::lang.common.columns.title'
         span: left
@@ -26,6 +32,7 @@ fields:
         nameFrom: title
         span: left
         emptyOption: 'janvince.smallmessages::lang.common.form_fields.empty_option'
+
 
 tabs:
     fields:
@@ -55,12 +62,33 @@ tabs:
             span: left
             tab: 'janvince.smallmessages::lang.common.tabs.visibility'
 
-        active:
-            label: 'janvince.smallmessages::lang.common.columns.active'
-            span: left
+        show_on_pages:
+            label: 'janvince.smallmessages::lang.settings.form_fields.show_on_pages'
+            comment: 'janvince.smallmessages::lang.settings.form_fields.show_on_pages_comment'
             type: checkbox
-            default: true
-            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+            default: false
+            span: left
+            tab: 'janvince.smallmessages::lang.common.tabs.restrictions'
+        show_on_pages_list:
+            label: 'janvince.smallmessages::lang.settings.form_fields.show_on_pages_list'
+            prompt: 'janvince.smallmessages::lang.settings.form_fields.show_on_pages_list_prompt'
+            span: right
+            type: repeater
+            style: collapsed
+            titleFrom: page_url
+            cssClass: field-indent
+            tab: 'janvince.smallmessages::lang.common.tabs.restrictions'
+            trigger:
+                action: show
+                field: show_on_pages
+                condition: checked
+            form:
+                fields:
+                    page_url:
+                        label: 'janvince.smallmessages::lang.settings.form_fields.page_url'
+                        comment: 'janvince.smallmessages::lang.settings.form_fields.page_url_comment'
+                        type: text
+                        span: full
 
         cookie_allow:
             label: 'janvince.smallmessages::lang.common.form_fields.cookie_allow'
@@ -68,8 +96,27 @@ tabs:
             default: null
             type: checkbox
             span: left
-            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
-
+            tab: 'janvince.smallmessages::lang.common.tabs.cookies'
+        cookie_pages_list:
+            label: 'janvince.smallmessages::lang.settings.form_fields.cookie_pages_list'
+            prompt: 'janvince.smallmessages::lang.settings.form_fields.cookie_pages_list_prompt'
+            span: right
+            type: repeater
+            style: collapsed
+            titleFrom: page_url
+            cssClass: field-indent
+            tab: 'janvince.smallmessages::lang.common.tabs.cookies'
+            trigger:
+                action: show
+                field: cookie_allow
+                condition: checked
+            form:
+                fields:
+                    page_url:
+                        label: 'janvince.smallmessages::lang.settings.form_fields.page_url'
+                        comment: 'janvince.smallmessages::lang.settings.form_fields.page_url_comment'
+                        type: text
+                        span: full
         cookie_lifetime_days:
             label: 'janvince.smallmessages::lang.common.form_fields.cookie_lifetime_days'
             comment: 'janvince.smallmessages::lang.common.form_fields.cookie_lifetime_days_comment'
@@ -78,10 +125,9 @@ tabs:
             min: 1
             type: number
             span: left
-            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+            tab: 'janvince.smallmessages::lang.common.tabs.cookies'
             cssClass: 'field-indent'
             trigger:
                 action: show
                 field: cookie_allow
                 condition: checked
-

@@ -79,7 +79,7 @@ class Messages extends ComponentBase
 
     }
 
-    public function onRun() 
+    public function onRender() 
     {
 
         $this->page['messagesItems'] = $this->items();
@@ -100,12 +100,10 @@ class Messages extends ComponentBase
          */
         if( $this->property('categorySlug') ) 
         {
-
             $messages->whereHas('category', function ($query) 
+
             {
-
                 $query->where('slug', $this->property('categorySlug'));
-
             });
         }
 
@@ -148,21 +146,65 @@ class Messages extends ComponentBase
 
         $data = $messages->get();
 
-        /**
-         * Filter messages with active cookie
-         */
-        if( $this->property('hide_with_cookie') ) 
-        {
-            foreach($data as $key => $value) {
 
-                if($value->id and !empty($_COOKIE[('sm-cookie-'.$value->id)])) {
-                    $data->pull($key);
+        /**
+         * Filter by page URL and cookie
+         */
+        foreach($data as $itemKey => $itemValue) 
+        {
+
+            /**
+             * Allowed pages list
+             */
+            $messageOnList = false;
+
+            if($itemValue->show_on_pages == 1 and $itemValue->show_on_pages_list) 
+            {
+
+                foreach($itemValue->show_on_pages_list as $key => $value) 
+                {
+                    // Remove message if not showable on current URL
+                    if(!empty($value['page_url'] and url($value['page_url']) == url()->current())) 
+                    {
+                        $messageOnList = true;
+                    } 
+                }
+
+                if(!$messageOnList) 
+                {
+                    $data->pull($itemKey);
+                }
+            }
+
+            /**
+             * Controlled by cookie
+             */
+            $forcedMessage = false;
+
+            if($this->property('hide_with_cookie'))
+            {
+
+                // Check if current page URL is on the forced pages list
+                if($itemValue->cookie_pages_list) 
+                {
+                    foreach($itemValue->cookie_pages_list as $key => $value) 
+                    {
+                        // Force show message if on pages list
+                        if(!empty($value['page_url'] and url($value['page_url']) == url()->current())) 
+                        {
+                            $forcedMessage = true;
+                        } 
+                    }
+                }
+
+                if(!$forcedMessage and $itemValue->id and !empty($_COOKIE[('sm-cookie-'.$itemValue->id)])) 
+                {
+                    $data->pull($itemKey);
                 }
             }
         }
 
         return $data;
-
     }
 
 }
