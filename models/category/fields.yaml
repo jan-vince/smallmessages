@@ -1,0 +1,48 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: janvince.smallmessages::lang.common.columns.title
+        span: left
+        require: true
+        type: text
+
+    slug:
+        label: janvince.smallmessages::lang.common.columns.slug
+        span: right
+        type: text
+        require: true
+        preset: title
+
+tabs:
+    fields:
+
+        content:
+            label: janvince.smallmessages::lang.common.columns.content
+            span: left
+            size: large
+            type: richeditor
+            tab: janvince.smallmessages::lang.common.tabs.info
+
+        color:
+            label: janvince.smallmessages::lang.common.columns.color
+            span: right
+            type: colorpicker
+            tab: janvince.smallmessages::lang.common.tabs.info
+
+        active:
+            label: 'janvince.smallmessages::lang.common.columns.active'
+            span: left
+            type: checkbox
+            default: true
+            tab: 'janvince.smallmessages::lang.common.tabs.info'
+
+        content:
+            label: janvince.smallmessages::lang.common.columns.content
+            span: full
+            size: giant
+            type: richeditor
+            tab: janvince.smallmessages::lang.common.tabs.content

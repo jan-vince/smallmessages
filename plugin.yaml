@@ -1,0 +1,16 @@
+plugin:
+    name: 'janvince.smallmessages::lang.plugin.name'
+    description: 'janvince.smallmessages::lang.plugin.description'
+    author: Jan Vince
+    icon: icon-file-text
+    homepage: 'https://github.com/jan-vince/smallmessages'
+permissions:
+    janvince.smallmessages.access_settings:
+        label: 'janvince.smallmessages::lang.permissions.access_settings'
+        tab: 'janvince.smallmessages::lang.plugin.name'
+    janvince.smallmessages.access_messages:
+        label: 'janvince.smallmessages::lang.permissions.access_messages'
+        tab: 'janvince.smallmessages::lang.plugin.name'
+    janvince.smallmessages.access_categories:
+        label: 'janvince.smallmessages::lang.permissions.access_categories'
+        tab: 'janvince.smallmessages::lang.plugin.name'

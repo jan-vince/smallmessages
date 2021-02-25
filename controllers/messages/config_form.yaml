@@ -1,0 +1,14 @@
+name: 'janvince.smallmessages::lang.plugin.label'
+modelClass: JanVince\SmallMessages\Models\Message
+form: $/janvince/smallmessages/models/message/fields.yaml
+defaultRedirect: janvince/smallmessages/messages
+create:
+    title: 'janvince.smallmessages::lang.message.create_title'
+    redirect: 'janvince/smallmessages/messages/update/:id'
+    redirectClose: janvince/smallmessages/messages
+update:
+    title: 'janvince.smallmessages::lang.message.update_title'
+    redirect: janvince/smallmessages/messages
+    redirectClose: janvince/smallmessages/messages
+preview:
+    title: 'janvince.smallmessages::lang.message.preview_title'

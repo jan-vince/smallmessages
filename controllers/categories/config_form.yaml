@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: janvince.smallmessages::lang.categories.category
+form: ~/plugins/janvince/smallmessages/models/category/fields.yaml
+modelClass: JanVince\SmallMessages\Models\Category
+defaultRedirect: janvince/smallmessages/categories
+
+create:
+    redirect: janvince/smallmessages/categories/update/:id
+    redirectClose: janvince/smallmessages/categories
+
+update:
+    redirect: janvince/smallmessages/categories
+    redirectClose: janvince/smallmessages/categories

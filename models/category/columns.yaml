@@ -1,0 +1,54 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: janvince.smallmessages::lang.common.columns.id
+        searchable: true
+        invisible: true
+
+    active:
+        label: 'janvince.smallmessages::lang.common.columns.active'
+        type: sm_switch
+        cssClass: text-center
+        sortable: true
+        width: 60px
+
+    title:
+        label: janvince.smallmessages::lang.common.columns.title
+        searchable: true
+        sortable: true
+        type: strong
+
+    slug:
+        label: janvince.smallmessages::lang.common.columns.slug
+        searchable: true
+        invisible: true
+
+    content:
+        label: janvince.smallmessages::lang.common.columns.content
+        type: sm_text
+
+    sort_order:
+        label: janvince.smallmessages::lang.common.columns.sort_order
+        type: number
+        width: 40px
+
+    color:
+        label: janvince.smallmessages::lang.common.columns.color
+        type: sm_color
+        cssClass: text-center
+        width: 40px
+        default: null
+
+    created_at:
+        label: janvince.smallmessages::lang.common.columns.created_at
+        type: datetime
+        invisible: true
+
+    updated_at:
+        label: janvince.smallmessages::lang.common.columns.updated_at
+        type: datetime
+        invisible: true

@@ -1,0 +1,21 @@
+fields: { }
+tabs:
+    icons:
+    fields:
+        ui_style:
+            label: 'janvince.smallmessages::lang.settings.form_fields.ui_style'
+            comment: 'janvince.smallmessages::lang.settings.form_fields.ui_style_comment'
+            type: dropdown
+            default: 'b3'
+            span: left
+            tab: 'janvince.smallmessages::lang.settings.tabs.messages'
+            options:
+                'b3': 'Bootstrap 3'
+                'plain': 'Plain HTML'
+        btn_hide_title:
+            label: 'janvince.smallmessages::lang.settings.form_fields.btn_hide_title'
+            comment: 'janvince.smallmessages::lang.settings.form_fields.btn_hide_title_comment'
+            default: 'Hide'
+            type: text
+            span: left
+            tab: 'janvince.smallmessages::lang.settings.tabs.messages'

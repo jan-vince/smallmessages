@@ -1,0 +1,94 @@
+{% set cookiesAllowed = [] %}
+
+<div class="modal fade" tabindex="-1" role="dialog" id="sm-modal-{{ __SELF__ }}">
+
+    <div class="modal-dialog" role="document">
+    
+        <div class="modal-content">
+
+            {% if messagesItems|length %}
+
+                {% for message in messagesItems %}
+
+                    <div id="sm-message-{{message.id}}" class="modal-body">
+
+                        {% if message.cookie_allow %}
+
+                            {% set cookiesAllowed = cookiesAllowed|merge({ (loop.index) : message }) %}
+
+                        {% endif %}
+
+                        <div class="message">
+
+                            {% if message.title %}
+
+                                <h4 class="message-title">{{ message.title }}</h4>
+
+                            {% endif %}
+
+                            {% if message.content %}
+
+                                {{ message.content|raw }}
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+                <div class="modal-footer">
+
+                    <button id="sm-btn-{{ __SELF__ }}" type="button" class="btn btn-primary" data-dismiss="modal">{{ settingsGet('btn_hide_title') ? settingsGet('btn_hide_title') : trans('janvince.smallmessages::lang.components.common.twig.btn_hide') }}</button>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% put scripts %}
+
+    {% if messagesItems|length %}
+
+        <script>
+        
+            $('#sm-modal-{{ __SELF__ }}').modal('show');
+        
+        </script>
+
+    {% endif %}
+
+    <script>
+
+        $('#sm-btn-{{ __SELF__ }}').click(function(e) {
+
+            e.preventDefault();
+
+            {% if cookiesAllowed|length %}
+
+                {# Set cookies for Messages #}
+                {% for item in cookiesAllowed if item.cookie_lifetime_days > 0 %}
+
+                    var date = new Date();
+
+                    date.setDate(date.getDate() + {{ item.cookie_lifetime_days }});
+
+                    document.cookie = "{{ 'sm-cookie-'~item.id~'=1; path=/; expires='}}" + date.toGMTString();
+
+                {% endfor %}
+
+            {% endif %}
+
+            $('#sm-modal-{{ __SELF__ }}').modal('hide');
+
+        });
+
+    </script>
+
+{% endput %}

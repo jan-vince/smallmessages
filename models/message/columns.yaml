@@ -1,0 +1,55 @@
+columns:
+    id:
+        label: janvince.smallmessages::lang.common.columns.id
+        sortable: true
+        searchable: true
+        invisible: true
+
+    active:
+        label: 'janvince.smallmessages::lang.common.columns.active'
+        type: sm_switch
+        cssClass: text-center
+        sortable: true
+        width: 60px
+
+    title:
+        label: 'janvince.smallmessages::lang.common.columns.title'
+        type: strong
+        searchable: true
+        sortable: true
+
+    category:
+        label: 'janvince.smallmessages::lang.common.columns.category'
+        relation: category
+        select: title
+        sortable: true
+        searchable: true
+
+    date_from:
+        label: 'janvince.smallmessages::lang.common.columns.date_from'
+        type: datetime
+        format: 'd.n.Y'
+        sortable: true
+
+    date_to:
+        label: 'janvince.smallmessages::lang.common.columns.date_to'
+        type: datetime
+        format: 'd.n.Y'
+        sortable: true
+
+    cookie_allow:
+        label: 'janvince.smallmessages::lang.common.columns.cookie_allow'
+        type: sm_switch
+        cssClass: text-center
+        sortable: true
+        width: 60px
+
+    created_at:
+        label: janvince.smallmessages::lang.common.columns.created_at
+        type: datetime
+        invisible: true
+
+    updated_at:
+        label: janvince.smallmessages::lang.common.columns.updated_at
+        type: datetime
+        invisible: true

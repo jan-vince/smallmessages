@@ -1,0 +1,14 @@
+title: 'janvince.smallmessages::lang.plugin.label'
+modelClass: JanVince\SmallMessages\Models\Message
+list: $/janvince/smallmessages/models/message/columns.yaml
+recordUrl: 'janvince/smallmessages/messages/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: date_from
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,87 @@
+fields:
+
+    id:
+        cssClass: hidden
+        readOnly: true
+        disabled: true
+
+    title:
+        label: 'janvince.smallmessages::lang.common.columns.title'
+        span: left
+        type: text
+        required: true
+
+    slug:
+        label: 'janvince.smallmessages::lang.common.columns.slug'
+        span: right
+        required: true
+        type: text
+        preset:
+            field: title
+            type: slug
+
+    category:
+        label: 'janvince.smallmessages::lang.common.columns.category'
+        type: relation
+        nameFrom: title
+        span: left
+        emptyOption: 'janvince.smallmessages::lang.common.form_fields.empty_option'
+
+tabs:
+    fields:
+
+        content:
+            type: richeditor
+            size: large
+            span: full
+            label: 'janvince.smallmessages::lang.common.columns.content'
+            tab: 'janvince.smallmessages::lang.common.tabs.content'
+
+        date_from:
+            label: 'janvince.smallmessages::lang.common.form_fields.date_from'
+            comment: 'janvince.smallmessages::lang.common.form_fields.date_from_comment'
+            type: datepicker
+            firstDay: 1
+            format: j.n.Y
+            span: left
+            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+
+        date_to:
+            label: 'janvince.smallmessages::lang.common.form_fields.date_to'
+            comment: 'janvince.smallmessages::lang.common.form_fields.date_to_comment'
+            type: datepicker
+            firstDay: 1
+            format: j.n.Y
+            span: left
+            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+
+        active:
+            label: 'janvince.smallmessages::lang.common.columns.active'
+            span: left
+            type: checkbox
+            default: true
+            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+
+        cookie_allow:
+            label: 'janvince.smallmessages::lang.common.form_fields.cookie_allow'
+            comment: 'janvince.smallmessages::lang.common.form_fields.cookie_allow_comment'
+            default: null
+            type: checkbox
+            span: left
+            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+
+        cookie_lifetime_days:
+            label: 'janvince.smallmessages::lang.common.form_fields.cookie_lifetime_days'
+            comment: 'janvince.smallmessages::lang.common.form_fields.cookie_lifetime_days_comment'
+            default: 30
+            step: 1
+            min: 1
+            type: number
+            span: left
+            tab: 'janvince.smallmessages::lang.common.tabs.visibility'
+            cssClass: 'field-indent'
+            trigger:
+                action: show
+                field: cookie_allow
+                condition: checked
+

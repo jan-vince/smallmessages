@@ -1,0 +1,9 @@
+<div id="sm-container-{{ __SELF__ }}">
+
+    {% if viewBag.hideMessagesBox == false and page.viewBag.hideMessagesBox == false %}
+
+        {% partial __SELF__ ~ '::messages-modal-' ~ settingsGet('ui_style', 'b3') %}
+
+    {% endif %}
+
+</div>
