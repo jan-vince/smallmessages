@@ -76,7 +76,7 @@ For default code you can look in `/plugins/janvince/smallmessages/components/mes
 ----
 > My thanks goes to:    
 > [OctoberCMS](http://www.octobercms.com) team members and supporters for this great system.   
-> []() for her photo.   
+> [Possessed Photography](https://unsplash.com/@possessedphotography) for banner photo.   
 > [Font Awesome](http://fontawesome.io/icons/) for nice icons.
 
 Created by [Jan Vince](http://www.vince.cz), freelance web designer from Czech Republic.
