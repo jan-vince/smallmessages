@@ -111,6 +111,7 @@ return
       'content' => 'Obsah',
       'cookie' => 'Cookie',
       'visibility' => 'Viditelnost',
+      'restrictions' => 'Omezení'
     ],
   ],
 
@@ -153,6 +154,15 @@ return
       'btn_hide_title_comment' => 'Můžete nastavit vlastní text tlačítka pro skrytí okna zpráv.',
       'ui_style' => 'UI styl okna zpráv',
       'ui_style_comment' => 'Můžete vybrat, jaký design má mít okno zpráv.',
+      'show_on_pages' => 'Zobrazit jen na vybraných stránkách',
+      'show_on_pages_comment' => 'Můžete přidat jednu nebo více stránek, na kterých se může zobrazit box se zprávami.',
+      'cookie_pages_list' => 'Vynutit zobrazení na těchto stránkách',
+      'cookie_pages_list_comment' => 'Na těchto stránkách se zobrazí box zpráv i v případě, že existuje uložené cookie',
+      'cookie_pages_list_prompt' => 'Přidat stránku',
+      'show_on_pages_list' => 'Zobrazit pouze na těchto stránkách',
+      'show_on_pages_list_prompt' => 'Přidat stránku',
+      'page_url' => 'URL adresa',
+      'page_url_comment' => 'Relativní cesta, eg.: /kontakt, /cs/produkty, ...',
     ],
   ],
 ];

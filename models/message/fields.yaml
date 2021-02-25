@@ -99,6 +99,7 @@ tabs:
             tab: 'janvince.smallmessages::lang.common.tabs.cookies'
         cookie_pages_list:
             label: 'janvince.smallmessages::lang.settings.form_fields.cookie_pages_list'
+            comment: 'janvince.smallmessages::lang.settings.form_fields.cookie_pages_list_comment'
             prompt: 'janvince.smallmessages::lang.settings.form_fields.cookie_pages_list_prompt'
             span: right
             type: repeater
