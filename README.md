@@ -48,7 +48,21 @@ You can set permissions to restrict access to *Settings > Small plugins > Small 
 
 Should be used in your Layout, Page or Partial.
 
-#### Hide messages box
+### Visibility
+
+You can set date from and/or date to if you want to control when a message box should appear on your web site.
+
+### Restrictions
+
+You can add list or (relative) URLs where message box should appear.
+
+### Cookies
+
+You can add a cookie control (with custom expiration) so when a user click Hide button, message box will not appear again (until a cookie expires).
+
+You can add URLs where message box will appear even with cookie (eg. useful for /contact page).
+
+#### Manually disable messages box
 
 If you need to hide Messages box on specific Partial, Page or Layout, you can use [View Bag](https://octobercms.com/docs/cms/components#viewbag-component) on your Page this way:
 

@@ -5,4 +5,5 @@
     - Added czech language
 1.2.0:
     - Added option to show messages on specific pages only and to force on cookie's controlled
+    - Updated docs
     - migration_v120.php
