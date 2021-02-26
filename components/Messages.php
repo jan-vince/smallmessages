@@ -71,7 +71,7 @@ class Messages extends ComponentBase
 
         $categories = [];
 
-        $categories = Category::isActive()->orderBy('name')->lists('title', 'slug');
+        $categories = Category::isActive()->orderBy('title')->lists('title', 'slug');
 
         $emptyOption = [0 => e(trans('janvince.smallmessages::lang.components.common.forms.empty_option')) ];
 
