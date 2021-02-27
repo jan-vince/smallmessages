@@ -14,9 +14,17 @@ class Category extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
 
+    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+
     public $table = 'janvince_smallmessages_categories';
 
     public $timestamps = true;
+
+    public $translatable = [
+        'title',
+        ['slug', 'index' => true],
+        'content',
+    ];
 
     /*
      * Validation

@@ -20,13 +20,6 @@ fields:
 tabs:
     fields:
 
-        content:
-            label: janvince.smallmessages::lang.common.columns.content
-            span: left
-            size: large
-            type: richeditor
-            tab: janvince.smallmessages::lang.common.tabs.info
-
         color:
             label: janvince.smallmessages::lang.common.columns.color
             span: right

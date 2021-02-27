@@ -16,6 +16,7 @@ class Settings extends Model {
     ];
 
     public $translatable = [
+        'btn_hide_title'
     ];
 
     protected $jsonable = [

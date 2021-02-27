@@ -27,7 +27,11 @@ class Message extends Model {
 
     protected $dates = ['date_from', 'date_to'];
 
-    public $translatable = [];
+    public $translatable = [
+        'title',
+        ['slug', 'index' => true],
+        'content',
+    ];
 
     protected $guarded = [];
 
