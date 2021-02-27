@@ -11,3 +11,5 @@
     - Fixes compoment properties
 1.2.2:
     - Fixed column type
+1.2.3:
+    - Fixes columns type (in Categories)

@@ -18,9 +18,9 @@ columns:
 
     title:
         label: janvince.smallmessages::lang.common.columns.title
+        type: text
         searchable: true
         sortable: true
-        type: strong
 
     slug:
         label: janvince.smallmessages::lang.common.columns.slug
