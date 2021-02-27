@@ -14,7 +14,7 @@ columns:
 
     title:
         label: 'janvince.smallmessages::lang.common.columns.title'
-        type: strong
+        type: text
         searchable: true
         sortable: true
 

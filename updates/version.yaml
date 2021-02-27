@@ -9,3 +9,5 @@
     - migration_v120.php
 1.2.1:
     - Fixes compoment properties
+1.2.2:
+    - Fixed column type
