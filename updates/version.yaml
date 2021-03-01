@@ -15,3 +15,5 @@
     - Fixes columns type (in Categories)
 1.2.4:
     - Added support for Rainlab.Translate plugin
+1.2.5:
+    - Updated messages component templates

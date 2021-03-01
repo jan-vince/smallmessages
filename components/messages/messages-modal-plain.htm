@@ -1,6 +1,6 @@
 {% set cookiesAllowed = [] %}
 
-<div id="sm-messages-{{ __SELF__ }}" style="display: hidden;">
+<div id="sm-messages-{{ __SELF__.alias }}" style="display: hidden;">
 
     {% if messagesItems|length %}
 
@@ -36,7 +36,7 @@
 
         <div class="footer">
 
-            <button id="sm-btn-{{ __SELF__ }}" type="button" class="btn btn-primary" data-dismiss="modal">{{ settingsGet('btn_hide_title') ? settingsGet('btn_hide_title') : trans('janvince.smallmessages::lang.components.common.twig.btn_hide') }}</button>
+            <button id="sm-btn-{{ __SELF__.alias }}" type="button" class="btn btn-primary" data-dismiss="modal">{{ settingsGet('btn_hide_title') ? settingsGet('btn_hide_title') : 'Hide' }}</button>
 
         </div>
 
@@ -51,7 +51,7 @@
 
         <script>
         
-            $('#sm-messages-{{ __SELF__ }}').show();
+            $('#sm-messages-{{ __SELF__.alias }}').show();
         
         </script>
 
@@ -59,7 +59,7 @@
 
     <script>
 
-        $('#sm-btn-{{ __SELF__ }}').click(function(e) {
+        $('#sm-btn-{{ __SELF__.alias }}').click(function(e) {
 
             e.preventDefault();
 
@@ -78,7 +78,7 @@
 
             {% endif %}
 
-            $('#sm-messages-{{ __SELF__ }}').hide();
+            $('#sm-messages-{{ __SELF__.alias }}').hide();
 
         });
 

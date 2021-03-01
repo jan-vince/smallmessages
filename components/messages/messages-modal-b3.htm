@@ -1,6 +1,6 @@
 {% set cookiesAllowed = [] %}
 
-<div class="modal fade" tabindex="-1" role="dialog" id="sm-modal-{{ __SELF__ }}">
+<div class="modal fade" tabindex="-1" role="dialog" id="sm-modal-{{ __SELF__.alias }}">
 
     <div class="modal-dialog" role="document">
     
@@ -40,7 +40,7 @@
 
                 <div class="modal-footer">
 
-                    <button id="sm-btn-{{ __SELF__ }}" type="button" class="btn btn-primary" data-dismiss="modal">{{ settingsGet('btn_hide_title') ? settingsGet('btn_hide_title') : 'Hide' }}</button>
+                    <button id="sm-btn-{{ __SELF__.alias }}" type="button" class="btn btn-primary" data-dismiss="modal">{{ settingsGet('btn_hide_title') ? settingsGet('btn_hide_title') : 'Hide' }}</button>
 
                 </div>
 
@@ -58,7 +58,7 @@
 
         <script>
         
-            $('#sm-modal-{{ __SELF__ }}').modal('show');
+            $('#sm-modal-{{ __SELF__.alias }}').modal('show');
         
         </script>
 
@@ -66,7 +66,7 @@
 
     <script>
 
-        $('#sm-btn-{{ __SELF__ }}').click(function(e) {
+        $('#sm-btn-{{ __SELF__.alias }}').click(function(e) {
 
             e.preventDefault();
 
@@ -85,7 +85,7 @@
 
             {% endif %}
 
-            $('#sm-modal-{{ __SELF__ }}').modal('hide');
+            $('#sm-modal-{{ __SELF__.alias }}').modal('hide');
 
         });
 
