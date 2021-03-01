@@ -21,6 +21,7 @@ class Migration_v120 extends Migration
 
     public function down()
     {
+
         if (Schema::hasColumn('janvince_smallmessages_messages', 'show_on_pages')) 
         {
 
@@ -37,6 +38,16 @@ class Migration_v120 extends Migration
             Schema::table('janvince_smallmessages_messages', function($table)
             {
                 $table->dropColumn('show_on_pages_list');
+            });
+
+        }
+
+        if (Schema::hasColumn('janvince_smallmessages_messages', 'cookie_pages_list')) 
+        {
+
+            Schema::table('janvince_smallmessages_messages', function($table)
+            {
+                $table->dropColumn('cookie_pages_list');
             });
 
         }
