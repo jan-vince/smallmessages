@@ -17,3 +17,5 @@
     - Added support for Rainlab.Translate plugin
 1.2.5:
     - Updated messages component templates
+1.2.6:
+    - Changed Twig function name to smSettingsGet

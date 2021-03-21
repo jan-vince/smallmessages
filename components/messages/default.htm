@@ -2,7 +2,7 @@
 
     {% if viewBag.hideMessagesBox == false and page.viewBag.hideMessagesBox == false %}
 
-        {% partial __SELF__ ~ '::messages-modal-' ~ settingsGet('ui_style', 'b3') %}
+        {% partial __SELF__ ~ '::messages-modal-' ~ smSettingsGet('ui_style', 'b3') %}
 
     {% endif %}
 

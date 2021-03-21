@@ -95,7 +95,7 @@ class Plugin extends PluginBase {
         return [
             'filters' => [],
             'functions' => [
-                'settingsGet' => function ($value, $default = NULL) use ($settings){
+                'smSettingsGet' => function ($value, $default = NULL) use ($settings){
 
                     if(empty($settings->$value)) {
                         return $default;
