@@ -5,7 +5,7 @@ namespace JanVince\SmallMessages\Updates;
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class Migration_v100 extends Migration
+class Migration_SM_v100 extends Migration
 {
     public function up()
     {
