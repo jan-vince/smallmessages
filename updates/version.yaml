@@ -19,3 +19,6 @@
     - Updated messages component templates
 1.2.6:
     - Changed Twig function name to smSettingsGet
+1.2.7:
+    - Added support for OCv3
+    - Added support for Bootstrap5

@@ -2,9 +2,9 @@
 
 <div class="modal fade" tabindex="-1" role="dialog" id="sm-modal-{{ __SELF__.alias }}">
 
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
     
-        <div class="modal-content">
+        <div class="modal-content p-3 pb-1">
 
             {% if messagesItems|length %}
 
@@ -58,8 +58,12 @@
 
         <script>
         
-            $('#sm-modal-{{ __SELF__.alias }}').modal('show');
-        
+            const myModal = new bootstrap.Modal(document.getElementById('sm-modal-{{ __SELF__.alias }}'), {});
+
+            document.onreadystatechange = function () {
+                myModal.show();
+            };
+
         </script>
 
     {% endif %}

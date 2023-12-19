@@ -11,6 +11,7 @@ tabs:
             tab: 'janvince.smallmessages::lang.settings.tabs.messages'
             options:
                 'b3': 'Bootstrap 3'
+                'b5': 'Bootstrap 5'
                 'plain': 'Plain HTML'
         btn_hide_title:
             label: 'janvince.smallmessages::lang.settings.form_fields.btn_hide_title'
